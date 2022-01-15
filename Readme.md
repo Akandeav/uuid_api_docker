@@ -11,7 +11,7 @@ Key will be the timestamp while value is the UUID. The API returns all previous 
 ## Requirements
 - Docker
 - docker-compose
-## installation
+## Installation
 1. Build Docker backend.   
 ```docker-compose up --build ```  
 This only applies to inital run. Subsequent runs should use ```docker-compose up```
@@ -31,3 +31,7 @@ to enter the backend service.
 - Need help contact [ME](mailto:akandevic@gmail.com?subject=Support:UUID-API)
 - Access django backend with:  
 ```docker-compose exec backend sh```
+
+## Known issues
+- MySQL port already assigned: This image has mysql running on ```port: 33068```.  
+If you run into MySQL port problems, reassign to an available port in ```docker-compose.yml```
